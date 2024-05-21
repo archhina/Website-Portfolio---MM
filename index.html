@@ -30,28 +30,21 @@
 				<div class="top-header">
 					<div class="container">
 						<a href="index.html" id="branding">
-							<img src="logo.webp" alt="Company Name" class="logo" width="95" height="65">
+							<img src="logo.png" alt="Company Name" class="logo">
 							<div class="logo-text">
 								<h1 class="site-title">Manjit Bhinder</h1>
 								<small class="description">Securing Your Future, Protecting Your Family</small>
 							</div>
 						</a> <!-- #branding -->
-						
-						<div class="location" style="display: inline-block; vertical-align: top; margin-left: 20px; position: relative; top: 25px; left: 75px; ">
-							<img src="icon-location.png" class="icon" alt="Location" style="vertical-align: middle; margin-right: 5px;" height="25" width="25">
-							<span>2 Automatic Rd Unit #214, Brampton, Ontario, L6S6K9, Canada</span>
+					
+						<div class="right-section pull-right">
+							<a href="#" class="phone"><img src="images/icon-phone.png" class="icon">+1 647 969 1477</a>
+					
+							<form action="#" class="search-form">
+								<input type="text" placeholder="Search...">
+								<button type="submit"><img src="images/icon-search.png" alt=""></button>
+							</form>
 						</div>
-						<div class="social-links">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-							<a href="#"><i class="fa fa-pinterest"></i></a>
-						</div>
-						<div class="right-section" style="left: 43%; top: 25px;">
-                        	<a href="#" class="phone"><img src="images/icon-phone.png" class="icon"> (647) - 969 - 1477 </a>
-                    	</div>
-
-						<div class="mobile-navigation"></div>
 					</div> <!-- .container -->
 				</div> <!-- .top-header -->
 
@@ -67,16 +60,22 @@
 							</ul> <!-- .menu -->
 						</div> <!-- .main-navigation -->
 						
+						<div class="social-links">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+							<a href="#"><i class="fa fa-pinterest"></i></a>
+						</div>
 						
+						<div class="mobile-navigation"></div>
 					</div>
 				</div>
 				
 			</header> <!-- .site-header -->
-			
 
 			<div class="hero hero-slider">
 				<ul class="slides">
-					<li data-bg-image="stockphotos/slide-1.jpg">
+					<li data-bg-image="dummy/slide-1.jpg">
 						<div class="container">
 							<div class="slide-content">
 								<h2 class="slide-title">Get your <strong>Life Insurance</strong></h2>
@@ -237,33 +236,40 @@
 						</div>
 					</div> <!-- .container -->
 				</div> <!-- .fullwidth-block -->
-				
-
-				<div class="fullwidth-block" >
-					<div class="map"></div>
+				<div class="fullwidth-block">
+					<div class="map-container">
+						<iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.8649791685048!2d-79.71058332332701!3d43.75490054584635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3d0fdedc2d45%3A0x7a713a7c6b000595!2s2%20Automatic%20Rd%2C%20Brampton%2C%20ON%20L6S%206K9%2C%20Canada!5e0!3m2!1sen!2sus!4v1716319623762!5m2!1sen!2sus" 
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+					</div>
 				</div>
+				<div class="contact-form-container">
+					<div class="col-md-9">
+						<h2 class="section-title text-center" style="text-decoration: underline;">Contact form</h2>
+						<form action="#" class="contact-form">
+							<div class="row">
+								<div class="col-md-4"><input type="text" placeholder="Your name..."></div>
+								<div class="col-md-4"><input type="text" placeholder="Email..."></div>
+								<div class="col-md-4"><input type="text" placeholder="Subject..."></div>
+							</div>
 
-				<div class="col-md-9" style="margin-bottom: 50px; margin-top: 50px;">
-					<h2 class="section-title text-center" style="position: relative; left: 200px;">Contact form</h2>
-					<form action="#" class="contact-form" >
-						<div class="row">
-							<div class="col-md-6"><input type="text" placeholder="Your name..."></div>
-							<div class="col-md-6"><input type="text" placeholder="Email..."></div>
-							<!-- <div class="col-md-4"><input type="text" placeholder="Website..."></div> -->
-						</div >
-	
-						<textarea  placeholder="Message..."></textarea>
-	
-						<p class="text-center" style="position: relative; left: 200px;">
-							<input type="submit" value="Send message">
-						</p>
-					</form>
+							<textarea  placeholder="Message..."></textarea>
+
+							<p class="text-center">
+								<input type="submit" value="Send message">
+							</p>
+						</form>
+
+
+					</div>
 				</div>
-
 			</main>
-
-			
-
 
 			<div class="site-footer">
 				<div class="widget-area">
@@ -275,7 +281,7 @@
 									<address> 2 Automatic Rd Unit #214, Brampton, Ontario, L6S6K9, Canada
 									</address>
 									<a href="#">Phone: +1 647 969 1477</a>
-									<a href="mailto:info@company.com">ManjitBhinderInsurance@gmail.com</a>
+									<a href="mailto:info@manjitbhinder.ca">info@manjitbhinder.ca</a>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-2">
@@ -322,7 +328,6 @@
 		</div>
 
 		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/app.js"></script>
 		

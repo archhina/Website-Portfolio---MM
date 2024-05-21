@@ -267,15 +267,36 @@ form textarea {
   .button:hover, form input[type="submit"]:hover, form button:hover, form input[type="reset"]:hover, .button:focus, form input[type="submit"]:focus, form button:focus, form input[type="reset"]:focus {
     background: #1392ec; }
 
-.map {
-  min-height: 450px; }
+/* Container for the map */
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+@media (min-width: 992px) {
+  .map-container {
+      width: 60%; /* Make the map smaller on larger screens */
+      padding-bottom: 40%;
+      margin: 0 auto; /* Center the map */
+  }
+}
 
 .container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
-  padding-right: 15px;
-  }
+  padding-right: 15px; }
   .container:after {
     content: " ";
     clear: both;
@@ -1116,10 +1137,9 @@ form textarea {
  * Header Styles
  */
 .site-header .top-header {
-  background-color: #ced3d8; ;
-  padding: 10px 0; }
+  padding: 15px 0; }
 .site-header .bottom-header {
-  background-color: #4a4c4e; ;
+  background-color: #4a4c4e;
   padding: 20px 0; }
   .site-header .bottom-header:after {
     content: " ";
@@ -1133,7 +1153,7 @@ form textarea {
 
 #branding {
   float: left; }
-  #branding .logo, #branding .logo-text, #branding  {
+  #branding .logo, #branding .logo-text {
     display: inline-block;
     vertical-align: middle; }
   #branding .logo {
@@ -1145,15 +1165,46 @@ form textarea {
     #branding .site-title a {
       color: #768089; }
 
-.right-section .phone, .right-section {
+.right-section .phone, .right-section .search-form {
   display: inline-block;
   vertical-align: middle;
   position: relative; }
+
 @media screen and (max-width: 640px) {
-  .right-section .phone {
-    display: none; } }
+    .phone {
+        display: block;
+        font-size: 16px;  /* Increase the font size for better visibility on mobile */
+        text-align: center; /* Center align for better aesthetics */
+        margin-top: 5px; /* Add some spacing if necessary */
+    }
+
+    .right-section {
+        text-align: center; /* Center the right section content for mobile */
+    }
+
+    /* Adjustments for the container holding the phone number */
+    .top-header .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .right-section .phone img {
   vertical-align: middle; }
+.right-section .search-form {
+  margin: 10px 0;
+  margin-left: 20px; }
+  @media screen and (max-width: 480px) {
+    .right-section .search-form {
+      display: none; } }
+  .right-section .search-form input {
+    padding-right: 40px; }
+  .right-section .search-form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: none; }
 
 .main-navigation {
   float: left; }
@@ -1197,15 +1248,13 @@ form textarea {
 .social-links {
   float: right; }
   .social-links a {
-    position: relative; 
-    top: 20px;
     width: 30px;
     height: 30px;
-    border: 1px solid #4a4c4e;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     text-align: center;
     line-height: 1.8;
-    color: #1392ec;
+    color: white;
     margin-left: 5px;
     display: inline-block;
     -webkit-transition: .3s ease;
@@ -1413,7 +1462,7 @@ form textarea {
   position: relative;
   padding-bottom: 50px; }
   .testimonial-slider .slides {
-    list-style: none;}
+    list-style: none; }
     .testimonial-slider .slides:after {
       content: " ";
       clear: both;
@@ -1662,8 +1711,6 @@ form textarea {
     font-weight: 300; }
 
 .contact-form input:not([type="submit"]), .contact-form textarea {
-  position: relative;
-  left: 250px;
   width: 100%;
   margin-bottom: 10px;
   -webkit-transition: .3s ease;
@@ -1673,6 +1720,28 @@ form textarea {
 .contact-form textarea {
   min-height: 150px;
   margin-bottom: 20px; }
+
+/* Container for the contact form */
+.contact-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .contact-form-container {
+      width: 70%; /* Adjust the width as needed */
+      margin: 0 auto; /* Center the container */
+  }
+}
+
+@media (max-width: 991px) {
+  .contact-form-container {
+      width: 90%; /* Adjust the width for smaller screens if needed */
+      margin: 0 auto;
+  }
+}
 
 /*
  * Footer Styles
@@ -1710,80 +1779,3 @@ form textarea {
         border-right: none; }
   .site-footer .colophon {
     color: #898b8d; }
-
-  
-  @media screen and (max-width: 767px) {
-  /* Adjust the container padding */
-  .container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  /* Make the header elements stack vertically */
-  .site-header .top-header, .site-header .bottom-header {
-    padding: 10px 0;
-  }
-
-  #branding {
-    float: none;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .location, .social-links, .right-section {
-    float: none;
-    display: block;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  /* Adjust the main navigation */
-  .main-navigation {
-    float: none;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .main-navigation .menu {
-    display: block;
-  }
-  .main-navigation .menu li {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  /* Adjust hero slider */
-  .hero-slider .slide-content {
-    width: 90%;
-    padding: 20px;
-    margin: 20px auto;
-  }
-
-  /* Adjust features section */
-  .feature {
-    margin-bottom: 20px;
-  }
-
-  /* Adjust offers section */
-  .offer {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  /* Adjust contact form */
-  .contact-form input:not([type="submit"]), .contact-form textarea {
-    left: 0;
-    width: 90%;
-    margin: 0 auto 10px;
-  }
-  .contact-form .text-center {
-    left: 0;
-  }
-
-  /* Adjust footer */
-  .site-footer .widget-area .widget {
-    margin-bottom: 20px;
-  }
-  .site-footer .bottom-footer {
-    padding: 20px 0;
-  }
-}
