@@ -1198,7 +1198,7 @@ form textarea {
   float: right; }
   .social-links a {
     position: relative; 
-    top: 15px;
+    top: 20px;
     width: 30px;
     height: 30px;
     border: 1px solid #4a4c4e;
@@ -1710,3 +1710,80 @@ form textarea {
         border-right: none; }
   .site-footer .colophon {
     color: #898b8d; }
+
+  
+  @media screen and (max-width: 767px) {
+  /* Adjust the container padding */
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Make the header elements stack vertically */
+  .site-header .top-header, .site-header .bottom-header {
+    padding: 10px 0;
+  }
+
+  #branding {
+    float: none;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .location, .social-links, .right-section {
+    float: none;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* Adjust the main navigation */
+  .main-navigation {
+    float: none;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .main-navigation .menu {
+    display: block;
+  }
+  .main-navigation .menu li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* Adjust hero slider */
+  .hero-slider .slide-content {
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  /* Adjust features section */
+  .feature {
+    margin-bottom: 20px;
+  }
+
+  /* Adjust offers section */
+  .offer {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Adjust contact form */
+  .contact-form input:not([type="submit"]), .contact-form textarea {
+    left: 0;
+    width: 90%;
+    margin: 0 auto 10px;
+  }
+  .contact-form .text-center {
+    left: 0;
+  }
+
+  /* Adjust footer */
+  .site-footer .widget-area .widget {
+    margin-bottom: 20px;
+  }
+  .site-footer .bottom-footer {
+    padding: 20px 0;
+  }
+}
