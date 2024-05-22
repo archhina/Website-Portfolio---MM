@@ -661,7 +661,7 @@ form textarea {
     width: 8.3333333333%; }
 
   .col-md-2 {
-    width: 16.6666666667%; }
+    width: 33.3333333333%; }
 
   .col-md-3 {
     width: 25%; }
@@ -1779,3 +1779,4 @@ form textarea {
         border-right: none; }
   .site-footer .colophon {
     color: #898b8d; }
+
